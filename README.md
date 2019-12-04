@@ -7,4 +7,4 @@ This little web app uses JS and Jquery to show a simple visualization for two so
 
 For large datasets, bubblesort is quite slow and may crash.
 
-Always welcome to criticism.
+If you have any questions or find bugs, please feel free to email me at siam.shafiq@gmail.com
