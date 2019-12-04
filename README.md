@@ -1,2 +1,10 @@
 # Sorting-Visualization
 Simple tool to visualize sorting algorithms.
+
+This little web app uses JS and Jquery to show a simple visualization for two sorting algorithms which are currently:
+1. Selection Sort
+2. Bubblesort
+
+For large datasets, bubblesort is quite slow and may crash.
+
+Always welcome to criticism.
