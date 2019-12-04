@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8" />
+        <script src="https://cmpt165.csil.sfu.ca/js/jquery-3.4.1.js"></script>
+        <script src="https://cmpt165.csil.sfu.ca/js/raphael-2.3.0.js"></script>
+
+        <script src="logic.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+        <title>website1</title>
+    </head> 
+    <body>
+        <h1 id ="title">Sorting Algorithms!</h1>
+
+        <div id="paper"></div>
+
+        <div class="form">
+            <h1>Drag the slider to adjust the size of the dataset!</h1>
+            <input type="range" min="1" max="500" value="250" class="slider" id="myRange">
+
+            <h2>You may select what type of dataset you'd like and your preferred sorting method.</h2>
+            <select id="object_select">
+                <option>Objects</option>
+                <option>Colors</option>
+            </select>
+            <!-- <button id="sort_btn_1">Sort</button> -->
+            
+            <button id="animated_sort">BubbleSort</button>
+            <button id="selection_sort">Selection Sort</button>
+            
+        </div>
+        <div id ="output"><h2></h2></div>
+        <div id ="time_complex"></div>
+
+        <div class="footer">
+            <p>Made with ❤️ by <a id ="footer_link" href="https://github.com/SiamShafiq">Siam Shafiq</a></p>
+        </div>
+
+    
+
+    </body>
+</html>
