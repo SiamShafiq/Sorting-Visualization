@@ -1,17 +1,22 @@
 setup = function() {
 
     let height = 400
-    preset_size = window.innerWidth
+    let preset_size = window.innerWidth * .70
     paper = Raphael('paper',preset_size, height)
 
-    function adjustSize(){
+    
+
+    document.getElementsByTagName("body")[0].onresize = function() {myFunction()};
+
+    function myFunction(){
         paper.remove()
         let height = 400
-        preset_size = window.innerWidth
+        preset_size = window.innerWidth * .75
         paper = Raphael('paper',preset_size, height)
+        console.log(preset_size)
     }
-    window.onresize = adjustSize;
 
+    console.log(preset_size)
     let r
     
     $("")
@@ -28,12 +33,13 @@ setup = function() {
         paper.clear()
         document.getElementById("output").innerHTML = ""
         document.getElementById("time_complex").innerHTML = "" 
-        console.log(objectSelect)
+        // console.log(objectSelect)
     });
 
     let colors = []
     let shapeArray = []
     slider_value = 0
+
     slider.oninput = function() {
         textBoxValue = this.value
         document.getElementById("output").innerHTML = "Size of Data: " + textBoxValue
@@ -54,7 +60,7 @@ setup = function() {
             }
             
             drawDiagram(colors)
-            console.log(colors.length)
+            // console.log(colors.length)
 
         } else if(objectSelect == "Objects"){
             paper.clear()
@@ -65,16 +71,19 @@ setup = function() {
                 shapeArray[i] = Math.floor(Math.random() * 300) + 20;
                 colors[i] = generate_random_color()
             }
-            console.log(colors)
+            // console.log(colors)
             drawShapes(shapeArray,colors)
 
         }
+        // console.log(textBoxValue)
+        // console.log(square_size)
         
     }
 
     function drawShapes(arr, colorarr){
         let x = 0
         let square_size = preset_size/textBoxValue
+        // console.log(square_size)
         pos_square_x = square_size
 
         for(v = 0; v < arr.length; v++){
@@ -90,6 +99,7 @@ setup = function() {
     function drawDiagram(arr){
         x = 0
         square_size = preset_size/textBoxValue
+        // console.log(square_size)
         pos_square_x = square_size
 
         for(z = 0; z < arr.length; z++){
